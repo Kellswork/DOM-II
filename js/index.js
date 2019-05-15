@@ -3,6 +3,8 @@ const logoHeading = document.querySelector(".logo-heading");
 const contentSection = document.querySelector(".home .content-section");
 const inverseContent = document.querySelector(".home .inverse-content");
 const intro = document.querySelector('.intro h2');
+const image = document.querySelector('.img-content');
+// const image2 = document.querySelector('.inverse-content .img-content');
 
 // fun bus color changes on mouse over 
 // and changes back to its initial color on mouse leave
@@ -24,3 +26,18 @@ window.addEventListener("keydown", () => {
 intro.addEventListener('dblclick', () => {
  intro.textContent = 'We are going on a Road Trip!!!!'
 });
+
+
+image.addEventListener('mouseenter', (event)=> {
+    image.setAttribute('style', 'transform: rotate(180deg)'); 
+
+    setTimeout(()=> {
+        image.setAttribute('style', 'transform: rotate(0deg)');      
+    }, 4000)
+})
+
+// increases the logo text
+window.addEventListener('load', () => {
+    logoHeading.setAttribute('style', 'font-size: 6rem');
+})
+
