@@ -19,3 +19,8 @@ window.addEventListener("keydown", () => {
   contentSection.setAttribute("style", "flex-direction:row-reverse");
   inverseContent.setAttribute("style", "flex-direction:row-reverse");
 });
+
+// changes the text of .intro h2
+intro.addEventListener('dblclick', () => {
+ intro.textContent = 'We are going on a Road Trip!!!!'
+});
